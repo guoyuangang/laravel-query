@@ -1,4 +1,19 @@
 {
     "name": "guoyuangang/laravel-query",
-    "description": ""
+    "description": "",
+    "type": "package",
+    "homepage": "https://github.com/guoyuangang/laravel-query",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Guoyuangang\\Laravel\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Guoyuangang\\Laravel\\QueryServiceProvider"
+            ]
+        }
+    }
 }
