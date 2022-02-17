@@ -14,6 +14,7 @@ class QueryServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $router = $this->app['router'];
-        $router->get('query', [\Guoyuangang\Laravel\QueryController::class, 'index']);
+        $router->aliasMiddleware('connection', \Guoyuangang\Laravel\ConnectionMiddleware::class);
+        $router->get('query', [\Guoyuangang\Laravel\QueryController::class, 'index'])->middleware('connection');
     }
 }
